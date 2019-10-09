@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <title>Carlos Quimbay</title>
-       <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
-    <body>
-        <header>
-            <span class="logo">My WebSite</span>
-            <a id="toggleMenu">Menu<a></a>
+
+<head>
+    <title>Carlos Quimbay</title>
+    <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <span class="logo">My WebSite</span>
+        <a id="toggleMenu">Menu<a></a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -16,39 +20,47 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+    </header>
 
-        <main>
 
-            <h1>Contact Carlos Quimbay</h1>
-            <form action="https://formspree.io/asmithee@mailinator.com" method="POST">
+    <main>
+        <section class="showcase">
+            <div class="nes-container is-rounded">
+                <h1>Contact Carlos Quimbay</h1>
+                <form action="https://formspree.io/asmithee@mailinator.com" method="POST">
 
-                <div>
-                    <input type="hidden" name="_subject" value="New submission!">
-                </div>
+                    <div>
+                        <input type="hidden" name="_subject" value="New submission!">
+                    </div>
 
-                <div>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name">
-                </div>
+                    <div class="nes-field is-inline">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" class="nes-input" name="name">
+                    </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" type="text" name="_replyto">  
-                </div>
+                    <div class="nes-field is-inline">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" class="nes-input" name="_replyto" placeholder="sample@email.com">
+                    </div>
 
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
+                    <div class="nes-field is-inline">
+                        <label for="message">Message</label>
+                        <textarea id="text-area-field" class="nes-textarea" name="message"></textarea>
+                    </div>
 
-                <div>
-                    <input type="submit" value="Send">
-                </div>
+                    <div class="send-btn">
+                        <a href="thanks.html" class="nes-btn">Send</a>
+                    </div>
 
-                <input type="hidden" name="_next" value="//microtrain.github.io/thanks.html">
-            </form>
-        </main>
+                    <input type="hidden" name="_next" value="//microtrain.github.io/thanks.html">
+                </form>
+            </div>
+        </section>
 
-    </body>
+    </main>
+
+
+
+</body>
+
 </html>

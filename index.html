@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <title>Carlos Quimbay</title>
-       <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
-    <body>
-        <header>
-            <span class="logo">My WebSite</span>
-            <a id="toggleMenu">Menu<a></a>
+
+<head>
+    <title>Carlos Quimbay</title>
+    <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <span class="logo">My WebSite</span>
+        <a id="toggleMenu">Menu<a></a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -16,35 +20,38 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+    </header>
 
-        <main>
-            <h1>Hello, I'm Carlos Quimbay</h1>
-            <p>
-                <img 
-                    class="avatar"
-                    src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64" 
-                    alt="Carlos Quimbay">
-        
-                After five decades in Hollywood I've decided to transition into web 
-                and mobile development.
-            </p>
-        </main>
+    <main>
+        <section class="showcase">
+            <div class="nes-container is-rounded">
+                <h1>Hello, I'm Carlos Quimbay</h1>
+                <p>
+                    <i class="nes-bcrikko"></i>
+                    <div class="nes-balloon from-left">
+                        <p>Not just your typical web and mobile software developer.</p>
+                    </div>
+                </p>
+            </div>
+        </section>
 
-        <script>
-            var toggleMenu = document.getElementById('toggleMenu');
-            var nav = document.querySelector('nav');
-            toggleMenu.addEventListener(
-                'click',
-                function(){
-                if(nav.style.display=='block'){
-                    nav.style.display='none';
-                }else{
-                    nav.style.display='block';
+    </main>
+
+    <script>
+        var toggleMenu = document.getElementById('toggleMenu');
+        var nav = document.querySelector('nav');
+        toggleMenu.addEventListener(
+            'click',
+            function () {
+                if (nav.style.display == 'block') {
+                    nav.style.display = 'none';
+                } else {
+                    nav.style.display = 'block';
                 }
-                }
-            );
-        </script>
-        
-    </body>
+            }
+        );
+    </script>
+
+</body>
+
 </html>
