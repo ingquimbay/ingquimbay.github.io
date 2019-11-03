@@ -6,50 +6,57 @@
     <link rel="stylesheet" type="text/css" href="src/scss/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <span class="logo">My WebSite</span>
-        <a id="toggleMenu">Menu<a></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <div class="burger">
+                <i class="fa fa-bars menu"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a>
+                <li><a href="contact.html">Contact</a>
+            </ul>
+        </nav>
     </header>
+    <!-- <header>
+        <div class="nav-bar" id="top-nav-bar">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header> -->
 
     <main>
         <section class="showcase">
             <div class="nes-container is-rounded">
                 <h1>Hello, I'm Carlos Quimbay</h1>
                 <p>
-                    <i class="nes-bcrikko"></i>
+
                     <div class="nes-balloon from-left">
                         <p>Not just your typical web and mobile software developer.</p>
                     </div>
+                    <i class="nes-bcrikko"></i>
                 </p>
             </div>
         </section>
 
     </main>
 
-    <script>
-        var toggleMenu = document.getElementById('toggleMenu');
-        var nav = document.querySelector('nav');
-        toggleMenu.addEventListener(
-            'click',
-            function () {
-                if (nav.style.display == 'block') {
-                    nav.style.display = 'none';
-                } else {
-                    nav.style.display = 'block';
-                }
-            }
-        );
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('ul').toggleClass('active');
+            })
+        })
     </script>
 
 </body>

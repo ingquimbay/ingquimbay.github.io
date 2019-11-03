@@ -14,57 +14,69 @@ body {
     margin: 0;
 }
 
+/* .nav-bar {
+    height: 50px;
+    overflow: hidden;
+    background: #4B8BB3;
+}
+
+.nav-bar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    text-decoration: none;
+    background: #85d0ff;
+} */
+
 header {
     height: 50px;
     background: #4B8BB3;
+    color: #fff;
     padding: 0 .5rem 0 1rem;
 }
 
-header .logo {
-    line-height: 50px;
-    font-weight: bold;
-}
-
 nav {
-    float: left;
+    float: right;
 }
 
 nav ul {
-    position: fixed;
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: hidden;
-    text-align: center;
-    vertical-align: top;
 }
 
 nav ul li {
-    display: inline-block;
-    list-style-type: none;
-    float: left;
-    margin-left: 10px;
+    list-style: none;
+    display: inline;
 }
 
 nav ul li a,
 nav ul li a:link,
 nav ul li a:visited {
-    display: block;
+    display: inline-block;
     padding: 0 .5rem;
     color: #fff;
     line-height: 50px;
-    text-align: center;
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    text-decoration: none;
     background: #85d0ff;
 }
 
-.logo {
-    float: left;
-    position: relative;
+.burger {
+    width: 100%;
+    padding: 5px;
+    text-align: right;
+    box-sizing: border-box;
+    font-size: 25px;
+    display: none;
 }
 
 main {
@@ -76,12 +88,6 @@ main {
 
     /* For smaller screens to not exceed the max screen width */
     max-width: 90%;
-}
-
-.avatar {
-    border-radius: 50%;
-    float: left;
-    margin-right: 1em;
 }
 
 section.showcase {
@@ -97,36 +103,23 @@ section.showcase {
     justify-content: center;
 }
 
-#toggleMenu {
-    display: none;
-}
-
-@media only screen and (max-width: 960px) {
-
-    #toggleMenu {
+@media (max-width: 555px) {
+    .burger {
         display: block;
-        float: right;
-        line-height: 50px;
     }
 
-    header {
-        position: relative;
-    }
-
-    nav {
-        position: absolute;
+    ul {
+        width: 100%;
+        background: #4B8BB3;
         display: none;
-        background: #000;
-        top: 50px;
-        left: 0;
-        right: 0;
     }
 
-    nav ul li a,
-    nav ul li a:link,
-    nav ul li a:visited {
+    ul li {
         display: block;
-        border-bottom: 1px solid #777;
+        text-align: center;
     }
 
+    .active {
+        display: block;
+    }
 }

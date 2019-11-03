@@ -6,22 +6,23 @@
     <link rel="stylesheet" type="text/css" href="src/scss/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <span class="logo">My WebSite</span>
-        <a id="toggleMenu">Menu<a></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <div class="burger">
+                <i class="fa fa-bars menu"></i>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a>
+                <li><a href="contact.html">Contact</a>
+            </ul>
+        </nav>
     </header>
-
 
     <main>
         <section class="showcase">
@@ -59,7 +60,14 @@
 
     </main>
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
 
 </body>
 
